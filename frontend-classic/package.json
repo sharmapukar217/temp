@@ -1,0 +1,61 @@
+{
+  "name": "@blog.hyperce.io/frontend-classic",
+  "version": "1.0.1",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "svelte-kit sync && svelte-check",
+    "lint": "eslint --fix src/**/*.{ts,svelte} --ignore-path .gitignore",
+    "format": "prettier -w src/**/*.{ts,svelte} --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "nprogress": "^0.2.0",
+    "qs": "^6.11.2",
+    "radix-svelte": "^0.8.0",
+    "rss": "^1.2.2",
+    "svelte-markdown": "^0.2.3",
+    "svelte-meta-tags": "^2.8.0",
+    "workbox-window": "^7.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.1.0",
+    "@sveltejs/kit": "^1.20.4",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/nprogress": "^0.2.0",
+    "@types/rss": "^0.0.30",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte": "^2.30.0",
+    "postcss": "^8.4.26",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.10.1",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.0",
+    "vite": "^4.4.2"
+  },
+  "prettier": {
+    "semi": true,
+    "printWidth": 100,
+    "trailingComma": "none",
+    "bracketSameLine": true,
+    "plugins": [
+      "prettier-plugin-svelte"
+    ]
+  },
+  "lint-staged": {
+    "*.js(x),svelte": [
+      "eslint --fix --ignore-path .gitignore"
+    ],
+    "*": "prettier -w --ignore-path .gitignore --ignore-unknown"
+  }
+}

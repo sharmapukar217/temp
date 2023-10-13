@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    overscroll-behavior: contain;
+  }
+
+  body {
+    overscroll-behavior: contain;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @apply flex min-h-screen flex-col;
+  }
+
+  /* pagination css */
+  .pagination-container .pagination-nav {
+    display: flex !important;
+    gap: 10px !important;
+    box-shadow: none !important;
+    justify-content: center;
+  }
+  
+  .pagination-container .pagination-nav .option{
+    color: hsl(0, 0%, 0%) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .pagination-container .pagination-nav .option:hover,
+  .pagination-container .pagination-nav .option.active {
+    background: #F5F5F5 !important;
+  }
+  
+
+  section,
+  footer {
+    @apply mx-auto max-w-3xl px-4;
+  }
+  a {
+    @apply outline-2 outline-offset-1 
+    focus-visible:no-underline focus-visible:outline-dashed;
+  }
+
+  /* ===== scrollbar ===== */
+  html {
+    overflow-y: scroll;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+/*    @apply bg-skin-fill;*/
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+/*    @apply bg-skin-card;*/
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+/*    @apply bg-skin-card-muted;*/
+  }
+
+  /* nprogress */
+  #nprogress {
+    @apply fixed top-0 left-0 w-full z-10;
+  }
+
+  #nprogress .bar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+/*    @apply bg-skin-accent h-1;*/
+  }
+
+  #nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+/*    @apply shadow-lg shadow-skin-accent-500/50;*/
+  }
+}
