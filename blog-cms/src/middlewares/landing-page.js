@@ -19,12 +19,17 @@ async function isInitialized(strapi) {
 }
 
 module.exports = (config, { strapi }) => {
+  const landingPageDisabled = process.env.DISABLE_LANDING_PAGE === "true";
+
   const index = fs.readFileSync(
     path.join(process.cwd(), "public", "index.html"),
     "utf8",
   );
 
   async function handler(ctx, next) {
+    // if admin page is disabled, redirect directly to dashboard
+    if (landingPageDisabled) return ctx.redirect(strapi.config.admin.url);
+
     const content = lodash.template(index)({
       serverTime: new Date().toUTCString(),
       isInitialized: await isInitialized(strapi),

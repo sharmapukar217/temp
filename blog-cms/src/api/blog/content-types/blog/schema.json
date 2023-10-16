@@ -55,10 +55,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ]
+      "allowedTypes": ["images", "videos"]
     },
     "comments": {
       "type": "relation",

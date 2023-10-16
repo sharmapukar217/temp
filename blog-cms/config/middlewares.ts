@@ -9,5 +9,5 @@ export default [
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
-  { resolve: "../src/middlewares/welcome-page" },
+  { resolve: "../src/middlewares/landing-page" },
 ];

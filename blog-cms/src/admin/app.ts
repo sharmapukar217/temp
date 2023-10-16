@@ -1,7 +1,7 @@
 import logo from "./extensions/logo.jpg";
 import favicon from "./extensions/favicon.jpg";
 
-const colors =  {
+const colors = {
   // primary colors
   primary100: "#DAF9F4",
   primary200: "#B7F3EE",
@@ -15,7 +15,7 @@ const colors =  {
   secondary500: "#FFDE00",
   secondary600: "#DBBB00",
   secondary700: "#B79A00",
-}
+};
 
 export default {
   config: {
@@ -34,15 +34,12 @@ export default {
     },
     translations: {
       en: {
-        // email plugin
-        // "email.Settings.email.plugin.placeholder.defaultFrom": "ex: Hyperce No-Reply '<'no-reply@hyperce.io'>'",
-        // "email.Settings.email.plugin.placeholder.defaultReplyTo": "ex: Hyperce '<'example@hyperce.io'>'",
-        "Settings.email.plugin.placeholder.defaultFrom": "ex: Hyperce No-Reply <no-reply@hyperce.io>",
-        "Settings.email.plugin.placeholder.defaultReplyTo": "ex: Hyperce <example@hyperce.io>",
-        "Settings.email.plugin.placeholder.testAddress": "ex: developer@example.com",
-        
+	// comment plugin
+	"comments.page.settings.form.gqlAuth.hint": "If enabled, GraphQL API queries & mutations can be triggered only by Authenticated users. Otherwise API remains open.",
+
         // content manager
-        "notification.info.autoreaload-disable": "Admin is in production mode, editing content types is disabled. Please switch to development mode by starting your server with `yarn develop`.",
+        "content-type-builder.notification.info.autoreaload-disable":
+          "Admin is in production mode, editing content types is disabled. Please switch to development mode by starting your server with `yarn develop`.",
 
         // app
         "app.components.BlockLink.blog": "",

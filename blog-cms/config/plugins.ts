@@ -4,8 +4,8 @@ export default ({ env }) => ({
     config: {
       contentTypes: {
         blog: {
-          field: 'slug',
-          references: 'title',
+          field: "slug",
+          references: "title",
         },
       },
     },
@@ -20,22 +20,21 @@ export default ({ env }) => ({
         "*": ["Title", "title", "Name", "name", "Subject", "subject"],
       },
       blockedAuthorProps: ["name", "email"],
-      reportReasons: {
+      reportReasons: {},
+      gql: {},
+    },
+  },
+  email: {
+    config: {
+      provider: "amazon-ses",
+      providerOptions: {
+        key: env("AWS_SES_KEY"),
+        secret: env("AWS_SES_SECRET"),
+        amazon: "https://email.ap-south-1.amazonaws.com",
       },
-      gql: {
+      settings: {
+        defaultFrom: "Hyperce <noreply@hyperce.io>",
       },
     },
   },
-    email: {
-      config: {
-        providerOptions: {
-        },
-        settings: {
-          defaultFrom: 'Hyperce <noreply@hyperce.io>'
-        },
-      },
-    },
-  });
-  
-  
-  
+});

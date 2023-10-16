@@ -1,4 +1,12 @@
 {
+  "email.Settings.email.plugin.placeholder.defaultFrom": "ex: Hyperce No-Reply '<'no-reply@hyperce.io'>'",
+  "email.Settings.email.plugin.placeholder.defaultReplyTo": "ex: Hyperce '<'example@hyperce.io'>'",
+  "Settings.email.plugin.placeholder.defaultFrom": "ex: Hyperce No-Reply <no-reply@hyperce.io>",
+  "Settings.email.plugin.placeholder.defaultReplyTo": "ex: Hyperce <example@hyperce.io>",
+  "Settings.email.plugin.placeholder.testAddress": "ex: developer@example.com",
+
+  "notification.info.autoreaload-disable": "Admin is in production mode, editing content types is disabled. Please switch to development mode by starting your server with `yarn develop`.",
+
   "Analytics": "Analytics",
   "Auth.components.Oops.text": "Your account has been suspended.",
   "Auth.components.Oops.text.admin": "If this is a mistake, please contact your administrator.",
